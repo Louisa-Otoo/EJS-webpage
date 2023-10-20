@@ -1,0 +1,158 @@
+
+ #menu-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1rem;
+    margin: 0.5rem;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.menu-column {
+    flex: 1;
+    padding: 10px;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    height: 94vh;
+    margin: 0.5rem ;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: linear-gradient( white, rgb(151, 174, 113));
+    overflow: hidden;
+
+    width: 50rem;
+}
+
+.small-menu-container {
+    width: 50rem;
+    /* border: 2px solid brown; */
+} 
+
+.menu-items {
+    flex-direction: column;
+    row-gap: 0.5rem;
+    margin-top: 1rem;
+    align-self: center;
+    width: 100%;
+    padding-bottom: 1rem;
+}
+
+.menu-items select {
+    width: 30rem;
+    padding: 0.5rem 0.5rem;
+    border: 1px solid gray;
+    border-radius: 1rem;
+}
+.meals{
+    margin-top: 1.7rem;
+    width: 100%;
+    padding: 1rem 1.7rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(157, 155, 155, 0.299);
+    transition: 1sec ease-in-out;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    padding: 0.9rem 1.3rem;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.detail{
+    margin: 1rem;
+    width: 18rem;
+    padding: 0.5rem 0.5rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 1sec ease-in-out;
+}
+
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1rem;
+}
+
+.cart-container {
+    width: 20rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.2);
+    height: 75vh;
+    margin: 3rem 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: rgb(202, 216, 178);
+    float: right;
+} 
+
+
+.cart-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: rgb(50, 62, 30);
+}
+
+.heading,
+.item,
+.total {
+    display: flex;
+    justify-content: space-between;
+}
+
+.heading {
+    margin-bottom: 1rem;
+}
+
+.total {
+    margin-top: 1rem;
+}
+
+.order,
+.confirmed {
+    background-color: rgb(131, 155, 90); 
+    color: #fff; 
+    font-size: 1rem; 
+    border: none; 
+    border-radius: 0.5rem; 
+    padding: 0.5rem 1rem; 
+    cursor: pointer; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    margin-top: 1rem;
+}
+
+.cancel {
+    background-color: rgb(249, 132, 132); 
+    color: #fff; 
+    font-size: 1rem; 
+    border: none; 
+    border-radius: 0.5rem; 
+    padding: 0.5rem 1rem; 
+    cursor: pointer; 
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); 
+    margin-top: 1rem;
+}
+
+.order:hover,
+.confirmed:hover {
+    background-color: rgb(86, 103, 56);
+}
+
+.cancel:hover {
+    background-color: rgb(251, 97, 97);
+}
+
+  
+ 

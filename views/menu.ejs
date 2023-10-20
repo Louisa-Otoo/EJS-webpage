@@ -1,0 +1,111 @@
+
+    <title>Cuisine Cafe || Menu</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+  <div class="page-container">
+      <div class="sidebar">
+          <%- include('partials/sidebar.ejs') %>
+      </div>
+
+      <div id="menu-container">
+        <div class="food-choice">
+          <div class="menu-column">
+              <div class="heading">
+                  <h1>What would you like to order?</h1>
+              </div>
+              
+              <!-- <div class="menu-items-col"> -->
+              <!-- <div class="menu-items">
+                <select name="options" id="options">
+                  <%= kitchen.map(cuisine => `
+                    <option value="${cuisine}">${cuisine}</option>
+                  `).join('') %>
+                </select>
+              </div> -->
+              <div class="small-menu-container">
+              <div class="menu-items">
+                  <select name="options" id="options">
+                      <% kitchen.forEach(cuisine => { %>
+                          <option value=<%= cuisine %> ><%= cuisine %></option>
+                      <% }) %>
+                  </select>
+              </div>
+
+              <div class="meals">
+                <div class="container">
+               
+                    <% meals.forEach(meal => { %>
+                        <div class="meal">
+                            <!-- <img src=<%= meal.image %> alt=""> -->
+                            <div class="detail"> 
+                             <div class="desc">
+                                <h3><%= meal.name %></h3>
+                                <h3><%= meal.price %></h3>
+                             </div>
+                             <div class="description">
+                                 <p><%= meal.description %></p>
+                                 </div>
+                            </div>
+                            <button class="order" id="<% meal.id %>"> order</button>
+                           
+                         </div>
+                         <% }) %>
+                  
+                </div>
+              </div>  
+            </div>
+
+      </div>
+  </div>
+
+  <aside>
+      <div class="cart-container">
+          <h2 class="cart-title">Current Order</h2>
+          
+                <div class="cart-content">
+                    <hr>
+                    <div class="heading">
+                        <h3 class="first">Item</h3>
+                        <h3>Qty</h3>
+                        <h3>Price</h3>    
+                    </div>
+                    <hr>
+                    <div class="item">
+                        <h3 class="first">Sushi pie</h3>
+                        <h3>1</h3>
+                        <h3>25.50</h3>
+                    </div>
+
+                    <div class="item">
+                        <h3 class="first">Dumplings</h3>
+                        <h3>1</h3>
+                        <h3>17.50</h3>
+                    </div>
+
+                    <div class="item">
+                        <h3 class="first">Baguette</h3>
+                        <h3>1</h3>
+                        <h3>11.50</h3>
+                    </div>
+                    <hr>
+                    <div class="total">
+                        <h3>Total</h3>
+                        <h3 class="price">54.50</h3>
+                    </div>
+                    <hr>
+                    <div class="confirm">
+                        <button class="cancel">Cancel</button>
+                        <button class="confirmed">Order</button>
+                    </div>
+                </div>    
+                
+            </div>
+        </div>
+      </aside>  
+    </div>
+
+    <script src="js/menu.js"></script>
+    <script src="js/app.js"></script>
